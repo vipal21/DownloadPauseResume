@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21208.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9id-I1-ho8">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21191"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View Controller-->
+        <scene sceneID="hKI-0q-2mb">
+            <objects>
+                <viewController id="9id-I1-ho8" customClass="SearchViewController" customModule="HalfTunes" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baT-j4-YMU">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="68" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="jCG-FU-fEU">
+                                <rect key="frame" x="0.0" y="100" width="390" height="710"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="TrackCell" rowHeight="66" id="xGt-HC-XGd" userLabel="Track Cell" customClass="TrackCell" customModule="HalfTunes" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="66"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xGt-HC-XGd" id="5QZ-5R-yGT">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="66"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5D-3t-wnk">
+                                                    <rect key="frame" x="14" y="29" width="35" height="17"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LTF-np-ho1">
+                                                    <rect key="frame" x="14.000000000000002" y="8" width="31.666666666666671" height="20"/>
+                                                    <color key="tintColor" systemColor="tintColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <progressView hidden="YES" opaque="NO" tag="40" contentMode="scaleToFill" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="pay-eT-7FD">
+                                                    <rect key="frame" x="14" y="52" width="254" height="4"/>
+                                                    <color key="tintColor" systemColor="systemBlueColor"/>
+                                                </progressView>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLh-yg-Jhb">
+                                                    <rect key="frame" x="334" y="12" width="48" height="30"/>
+                                                    <state key="normal" title="Cancel">
+                                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="cancelTapped:" destination="xGt-HC-XGd" eventType="touchUpInside" id="fGE-WM-fjR"/>
+                                                    </connections>
+                                                </button>
+                                                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PQu-xA-Me9">
+                                                    <rect key="frame" x="284" y="12" width="42" height="30"/>
+                                                    <state key="normal" title="Pause">
+                                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="pauseOrResumeTapped:" destination="xGt-HC-XGd" eventType="touchUpInside" id="yUY-YL-hGD"/>
+                                                    </connections>
+                                                </button>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="100% of 1.35MB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dz1-lH-xnL">
+                                                    <rect key="frame" x="284" y="45" width="97" height="14"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                    <color key="textColor" red="0.66666666669999997" green="0.66666666669999997" blue="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jHF-cT-f1U">
+                                                    <rect key="frame" x="279" y="9" width="94" height="30"/>
+                                                    <state key="normal" title="Download">
+                                                        <color key="titleColor" systemColor="systemBlueColor"/>
+                                                        <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="downloadTapped:" destination="xGt-HC-XGd" eventType="touchUpInside" id="hbq-de-q9B"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="tintColor" red="0.98624604940000005" green="0.0071207880970000003" blue="0.027434188870000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="OLh-yg-Jhb" firstAttribute="centerY" secondItem="PQu-xA-Me9" secondAttribute="centerY" id="0mo-Qq-dWJ"/>
+                                                <constraint firstItem="OLh-yg-Jhb" firstAttribute="leading" secondItem="PQu-xA-Me9" secondAttribute="trailing" constant="8" id="428-Au-ZF1"/>
+                                                <constraint firstAttribute="trailing" secondItem="Dz1-lH-xnL" secondAttribute="trailing" constant="9" id="4Xi-xQ-msK"/>
+                                                <constraint firstItem="jHF-cT-f1U" firstAttribute="leading" secondItem="pay-eT-7FD" secondAttribute="trailing" constant="11" id="6CP-Bf-Vqd"/>
+                                                <constraint firstItem="PQu-xA-Me9" firstAttribute="top" secondItem="5QZ-5R-yGT" secondAttribute="topMargin" constant="1" id="9Az-Yi-gHj"/>
+                                                <constraint firstAttribute="trailing" secondItem="OLh-yg-Jhb" secondAttribute="trailing" constant="8" id="CFS-Bv-IEV"/>
+                                                <constraint firstItem="LTF-np-ho1" firstAttribute="top" secondItem="5QZ-5R-yGT" secondAttribute="top" constant="8" id="CdS-zj-rHq"/>
+                                                <constraint firstItem="pay-eT-7FD" firstAttribute="centerY" secondItem="Dz1-lH-xnL" secondAttribute="centerY" constant="2" id="FRX-gC-eMk"/>
+                                                <constraint firstItem="jHF-cT-f1U" firstAttribute="top" secondItem="5QZ-5R-yGT" secondAttribute="top" constant="9" id="H6t-TD-nil"/>
+                                                <constraint firstAttribute="trailing" secondItem="jHF-cT-f1U" secondAttribute="trailing" constant="17" id="L8a-oS-gaC"/>
+                                                <constraint firstItem="OLh-yg-Jhb" firstAttribute="top" secondItem="5QZ-5R-yGT" secondAttribute="topMargin" constant="1" id="LYe-re-qYM"/>
+                                                <constraint firstItem="z5D-3t-wnk" firstAttribute="leading" secondItem="5QZ-5R-yGT" secondAttribute="leading" constant="14" id="MnU-Dc-ExK"/>
+                                                <constraint firstItem="Dz1-lH-xnL" firstAttribute="leading" secondItem="PQu-xA-Me9" secondAttribute="leading" id="RF0-R0-n3w"/>
+                                                <constraint firstItem="pay-eT-7FD" firstAttribute="top" secondItem="z5D-3t-wnk" secondAttribute="bottom" constant="6" id="Y5f-on-33U"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="LTF-np-ho1" secondAttribute="trailing" constant="102" id="ckG-bK-SQc"/>
+                                                <constraint firstItem="pay-eT-7FD" firstAttribute="leading" secondItem="5QZ-5R-yGT" secondAttribute="leading" constant="14" id="gg1-WG-6sv"/>
+                                                <constraint firstItem="LTF-np-ho1" firstAttribute="leading" secondItem="5QZ-5R-yGT" secondAttribute="leading" constant="14" id="hDq-v6-amY"/>
+                                                <constraint firstItem="z5D-3t-wnk" firstAttribute="top" secondItem="LTF-np-ho1" secondAttribute="bottom" constant="1" id="jtb-B0-NfO"/>
+                                                <constraint firstAttribute="trailingMargin" relation="greaterThanOrEqual" secondItem="z5D-3t-wnk" secondAttribute="trailing" constant="102" id="tXO-P9-SHw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="pay-eT-7FD" secondAttribute="trailing" constant="102" id="xHM-BE-Zsn"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="artistLabel" destination="z5D-3t-wnk" id="Unc-1e-Utf"/>
+                                            <outlet property="cancelButton" destination="OLh-yg-Jhb" id="XlM-rf-db1"/>
+                                            <outlet property="downloadButton" destination="jHF-cT-f1U" id="Ssc-wA-VNu"/>
+                                            <outlet property="pauseButton" destination="PQu-xA-Me9" id="aNh-bC-FHX"/>
+                                            <outlet property="progressLabel" destination="Dz1-lH-xnL" id="1AT-zU-TlM"/>
+                                            <outlet property="progressView" destination="pay-eT-7FD" id="8H7-yZ-l0e"/>
+                                            <outlet property="titleLabel" destination="LTF-np-ho1" id="xTn-xf-vYN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="9id-I1-ho8" id="2by-CD-gB5"/>
+                                    <outlet property="delegate" destination="9id-I1-ho8" id="GjV-yg-PdB"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" searchBarStyle="prominent" text="" placeholder="Song name or artist" translatesAutoresizingMaskIntoConstraints="NO" id="tfF-Jw-qHc">
+                                <rect key="frame" x="0.0" y="44" width="390" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="9id-I1-ho8" id="5GU-kz-R48"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y3P-F1-IfW"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="tfF-Jw-qHc" firstAttribute="top" secondItem="Y3P-F1-IfW" secondAttribute="top" id="KwP-xy-uM1"/>
+                            <constraint firstItem="jCG-FU-fEU" firstAttribute="top" secondItem="tfF-Jw-qHc" secondAttribute="bottom" id="VIA-Tf-rkl"/>
+                            <constraint firstItem="Y3P-F1-IfW" firstAttribute="trailing" secondItem="jCG-FU-fEU" secondAttribute="trailing" id="apw-5a-5Bg"/>
+                            <constraint firstItem="jCG-FU-fEU" firstAttribute="leading" secondItem="Y3P-F1-IfW" secondAttribute="leading" id="mq6-fj-MTY"/>
+                            <constraint firstItem="Y3P-F1-IfW" firstAttribute="bottom" secondItem="jCG-FU-fEU" secondAttribute="bottom" id="rfp-Ot-Zll"/>
+                            <constraint firstItem="Y3P-F1-IfW" firstAttribute="trailing" secondItem="tfF-Jw-qHc" secondAttribute="trailing" id="uQ3-9g-Lik"/>
+                            <constraint firstItem="tfF-Jw-qHc" firstAttribute="leading" secondItem="Y3P-F1-IfW" secondAttribute="leading" id="yrL-79-60F"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="qSL-k1-yAK"/>
+                    <connections>
+                        <outlet property="searchBar" destination="tfF-Jw-qHc" id="YG7-jr-gfQ"/>
+                        <outlet property="tableView" destination="jCG-FU-fEU" id="nVj-ph-eCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="taD-SX-qwf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-182" y="-410"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="tintColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
